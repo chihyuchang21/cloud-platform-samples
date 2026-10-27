@@ -1,0 +1,18 @@
+[project]
+name = "cloudflare-worker-sample"
+version = "0.1.0"
+description = "Cloudflare Python Worker 範例"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "workers-py",
+    "workers-runtime-sdk",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

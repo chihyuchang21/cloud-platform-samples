@@ -1,0 +1,24 @@
+{
+  // Cloudflare Workers 設定；Python Worker 必須啟用 python_workers flag。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloud-platform-samples-edge",
+  "main": "src/entry.py",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["python_workers"],
+  "observability": {
+    "enabled": true
+  },
+  // 非敏感設定放 vars；密鑰請用 `wrangler secret put`，不要寫在這裡。
+  "vars": {
+    "APP_NAME": "cloud-platform-samples",
+    "ENVIRONMENT": "development"
+  },
+  "env": {
+    "production": {
+      "vars": {
+        "APP_NAME": "cloud-platform-samples",
+        "ENVIRONMENT": "production"
+      }
+    }
+  }
+}

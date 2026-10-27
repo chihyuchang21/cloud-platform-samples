@@ -1,0 +1,4 @@
+# 本機 `pywrangler dev` 會讀這個檔（複製成 .dev.vars）。
+# .dev.vars 已被 .gitignore 排除，線上密鑰請用 `wrangler secret put <NAME>`。
+APP_NAME=cloud-platform-samples
+ENVIRONMENT=development
